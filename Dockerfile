@@ -10,3 +10,6 @@ RUN wget --no-verbose -O /tmp/apache-maven-${MAVEN_VERSION}.tar.gz http://archiv
     rm -f /tmp/apache-maven-${MAVEN_VERSION}.tar.gz
 
 RUN java -version 
+
+USER jenkins
+WORKDIR /home/jenkins
