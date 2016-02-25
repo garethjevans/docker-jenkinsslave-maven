@@ -9,6 +9,10 @@ RUN wget --no-verbose -O /tmp/apache-maven-${MAVEN_VERSION}.tar.gz http://archiv
     ln -s ${MAVEN_HOME}/bin/mvn /usr/local/bin && \
     rm -f /tmp/apache-maven-${MAVEN_VERSION}.tar.gz
 
+RUN mkdir -p /usr/share/sbt/0.13.9 && \
+    curl -fL https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.9/sbt-launch.jar -o /usr/share/sbt/0.13.9/sbt-launch.jar
+
+
 RUN chown jenkins:jenkins -R /home/jenkins
 
 USER jenkins
