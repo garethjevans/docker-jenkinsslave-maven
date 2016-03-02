@@ -16,7 +16,8 @@ RUN mkdir -p /usr/share/sbt/${SBT_VERSION} && \
 
 RUN mkdir -p /usr/share/gradle/ && \
     curl -fL https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip -o /usr/share/gradle/gradle-${GRADLE_VERSION}-all.zip && \
-    unzip /usr/share/gradle/gradle-${GRADLE_VERSION}-all.zip 
+    unzip /usr/share/gradle/gradle-${GRADLE_VERSION}-all.zip -d /usr/share/gradle/ && \
+    rm /usr/share/gradle/gradle-${GRADLE_VERSION}-all.zip 
 
 RUN chown jenkins:jenkins -R /home/jenkins
 
