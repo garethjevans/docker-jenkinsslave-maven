@@ -12,7 +12,7 @@ RUN wget --no-verbose -O /tmp/apache-maven-${MAVEN_VERSION}.tar.gz http://archiv
     rm -f /tmp/apache-maven-${MAVEN_VERSION}.tar.gz
 
 RUN mkdir -p /usr/share/sbt/${SBT_VERSION} && \
-    curl -fL https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/${SBT_VERSION}/sbt-launch.jar -o /usr/share/sbt/${SBT_VERSION}/sbt-launch.jar
+    curl -kfL https://dl.bintray.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/${SBT_VERSION}/sbt-launch.jar -o /usr/share/sbt/${SBT_VERSION}/sbt-launch.jar
 
 RUN mkdir -p /usr/share/gradle/ && \
     curl -fL https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip -o /usr/share/gradle/gradle-${GRADLE_VERSION}-all.zip && \
