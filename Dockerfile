@@ -1,4 +1,4 @@
-FROM garethjevans/jenkinsslave:v1.2.3-alpine
+FROM garethjevans/jenkinsslave:v1.0
 
 ENV MAVEN_VERSION 3.3.9
 ENV MAVEN_HOME /opt/maven
