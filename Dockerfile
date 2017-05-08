@@ -1,6 +1,6 @@
 FROM garethjevans/jenkinsslave:v1.2.3-alpine
 
-ENV MAVEN_VERSION 3.3.9
+ENV MAVEN_VERSION 3.2.2
 ENV MAVEN_HOME /opt/maven
 ENV SBT_VERSION 0.13.9
 ENV GRADLE_VERSION 2.11
